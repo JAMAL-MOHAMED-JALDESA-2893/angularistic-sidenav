@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { BodyComponent } from './body/body.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ProductsComponent } from './products/products.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BodyComponent,
     SidenavComponent,
-    ProductsComponent
+    ProductsComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,
