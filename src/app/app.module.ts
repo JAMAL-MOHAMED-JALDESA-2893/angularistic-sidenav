@@ -9,6 +9,7 @@ import { ProductsComponent } from './products/products.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { CoupensComponent } from './coupens/coupens.component';
 import { PagesComponent } from './pages/pages.component';
+import { MediaComponent } from './media/media.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PagesComponent } from './pages/pages.component';
     ProductsComponent,
     StatisticsComponent,
     CoupensComponent,
-    PagesComponent
+    PagesComponent,
+    MediaComponent
   ],
   imports: [
     BrowserModule,
