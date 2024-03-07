@@ -8,6 +8,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { ProductsComponent } from './products/products.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { CoupensComponent } from './coupens/coupens.component';
+import { PagesComponent } from './pages/pages.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CoupensComponent } from './coupens/coupens.component';
     SidenavComponent,
     ProductsComponent,
     StatisticsComponent,
-    CoupensComponent
+    CoupensComponent,
+    PagesComponent
   ],
   imports: [
     BrowserModule,
