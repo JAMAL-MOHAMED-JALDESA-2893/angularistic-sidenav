@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { navbarData } from './nav-dat';
 
 @Component({
   selector: 'app-sidenav',
@@ -9,6 +10,6 @@ export class SidenavComponent {
 
   collapsed = false;
 
-  navData = 
+  navData = navbarData
 
 }
