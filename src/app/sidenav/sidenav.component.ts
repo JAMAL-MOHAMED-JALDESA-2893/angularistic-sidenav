@@ -8,7 +8,7 @@ import { navbarData } from './nav-dat';
 })
 export class SidenavComponent {
 
-  collapsed = true;
+  collapsed = false;
 
   navData = navbarData
 
