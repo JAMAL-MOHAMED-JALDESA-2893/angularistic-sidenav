@@ -1,7 +1,7 @@
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
   <div class="logo-container">
-    <button class="logo"></button>
-    <div class="logo-text"></div>
+    <button class="logo">A</button>
+    <div class="logo-text" *ngIf="collapsed">Angular</div>
     <button class="btn-close"></button>
   </div>
   <ul class="sidenav-nav">
