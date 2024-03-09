@@ -1,3 +1,15 @@
-.body{
+.body {
   width: calc(100% - 5rem);
+  height: 100vh;
+  margin-left: 5rem;
+  z-index: 0;
+  position: relative;
+  top: 0;
+  transition: all .5s ease;
+}
+
+.body-trimmed {
+}
+
+.body-md-screen {
 }
