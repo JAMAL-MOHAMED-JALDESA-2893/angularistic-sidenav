@@ -75,7 +75,11 @@
       height: 3rem;
       color: #f3f3f3;
       text-decoration: none;
-      transition: color .3s ease;
+      transition: color 0.3s ease;
+
+      .sidenav-link-icon {
+        font-size: 22px;
+      }
     }
   }
 }
