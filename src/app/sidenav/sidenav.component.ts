@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { navbarData } from './nav-dat';
+import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-sidenav',
@@ -8,7 +9,8 @@ import { navbarData } from './nav-dat';
 })
 export class SidenavComponent {
 
-  collapsed = true;
+  @Output() onToggleSidenav: EventEmitter<> = new EventEmitter();
+  collapsed = false;
 
   navData = navbarData
 
@@ -18,7 +20,7 @@ export class SidenavComponent {
   }
 
   closeSidenav(): void{
-
+    this.collapsed = false
   }
 
 
