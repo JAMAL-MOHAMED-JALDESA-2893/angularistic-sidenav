@@ -74,8 +74,10 @@
       align-items: center;
       height: 3rem;
       color: #f3f3f3;
+      border-radius: 0.625rem;
       text-decoration: none;
       transition: color 0.3s ease;
+      border-radius: 0.625rem;
 
       .sidenav-link-icon {
         font-size: 22px;
@@ -91,8 +93,10 @@
     }
   }
 
-  .sidenav-nav-item:hover{
-    background-color: #fff;
-    color: #000;
+  .sidenav-nav-item:hover {
+    .sidenav-nav-link{
+      background-color: #fff;
+      color: #000;
+    }
   }
 }
