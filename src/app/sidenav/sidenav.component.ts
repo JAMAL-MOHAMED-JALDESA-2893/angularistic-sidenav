@@ -7,12 +7,19 @@ import { EventEmitter } from 'stream';
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss']
 })
+
+interface SideNavToggle{
+  screenWidth: number;
+  collapsed:boolean
+}
+
 export class SidenavComponent {
 
-  @Output() onToggleSidenav: EventEmitter<> = new EventEmitter();
+  @Output() onToggleSidenav: EventEmitter<SideNavToggle> = new EventEmitter();
   collapsed = false;
 
   navData = navbarData
+  screenWidth = 0;
 
 
   toggleCollapse(): void{
