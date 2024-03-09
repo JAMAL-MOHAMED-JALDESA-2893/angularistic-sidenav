@@ -51,12 +51,11 @@
   }
 }
 
-.sidenav-collapsed{
+.sidenav-collapsed {
   width: 16.5625rem;
 }
 
-
-.sidenav-nav{
+.sidenav-nav {
   list-style-type: none;
   padding: 0.938rem;
   margin: 0;
@@ -66,11 +65,13 @@
   height: calc(100% - 3.65rem);
   cursor: pointer;
 
-
-  .sidenav-nav-item{
+  .sidenav-nav-item {
     width: 100%;
-    margin-bottom: 0.65rem;
+    margin-bottom: 0.625rem;
+
+    .sidenav-nav-link{
+      display: flex;
+      align-items: center;
+    }
   }
-
-
 }
