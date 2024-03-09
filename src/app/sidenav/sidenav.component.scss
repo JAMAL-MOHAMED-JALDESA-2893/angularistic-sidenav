@@ -87,8 +87,12 @@
 
       .sidenav-link-text {
         margin-left: 1.5rem;
-        
       }
     }
+  }
+
+  .sidenav-nav-item:hover{
+    background-color: #fff;
+    color: #000;
   }
 }
