@@ -28,6 +28,9 @@ export class SidenavComponent implements OnInit{
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.screenWidth = window.innerWidth;
+    if (this.screenWidth <= 768) {
+      this.collapsed = false;
+    }
   }
 
 
