@@ -20,9 +20,14 @@ export const navbarData = [
     label: 'Coupens'
   },
   {
-    routeLink: 'dashboard',
-    icon: 'fal fa-home',
-    label: 'Dashboard'
+    routeLink: 'pages',
+    icon: 'fal fa-file',
+    label: 'Pages'
+  },
+  {
+    routeLink: 'media',
+    icon: 'fal fa-camera',
+    label: 'Media'
   }
 ];
 
