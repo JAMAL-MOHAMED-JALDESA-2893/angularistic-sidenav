@@ -1,2 +1,4 @@
 <app-sidenav (onToggleSidenav)="onToggleSidenav($event)"></app-sidenav>
-<app-body></app-body>
+<app-body
+[collapsed]="isSideNavCollapsed"
+></app-body>
