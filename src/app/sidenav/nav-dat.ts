@@ -10,14 +10,14 @@ export const navbarData = [
     label: 'Products'
   },
   {
-    routeLink: 'dashboard',
-    icon: 'fal fa-home',
-    label: 'Dashboard'
+    routeLink: 'statistics',
+    icon: 'fal fa-chart-bar',
+    label: 'Statistics'
   },
   {
-    routeLink: 'dashboard',
-    icon: 'fal fa-home',
-    label: 'Dashboard'
+    routeLink: 'coupens',
+    icon: 'fal fa-tags',
+    label: 'Coupens'
   },
   {
     routeLink: 'dashboard',
