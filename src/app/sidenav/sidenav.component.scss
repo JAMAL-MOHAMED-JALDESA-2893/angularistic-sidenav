@@ -94,9 +94,19 @@
   }
 
   .sidenav-nav-item:hover {
-    .sidenav-nav-link{
+    .sidenav-nav-link {
       background-color: #fff;
       color: #000;
     }
+  }
+}
+
+.active {
+  background-color: #fff;
+
+
+  .sidenav-link-icon,
+  .sidenav-link-text{
+    color: #000;
   }
 }
