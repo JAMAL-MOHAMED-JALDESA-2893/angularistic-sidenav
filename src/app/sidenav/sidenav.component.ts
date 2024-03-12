@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit, HostListener } from '@angular/core';
 import { navbarData } from './nav-dat';
 
 
@@ -24,6 +24,11 @@ export class SidenavComponent implements OnInit{
 
   navData = navbarData
   screenWidth = 0;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.screenWidth = window.innerWidth;
+  }
 
 
   toggleCollapse(): void{
