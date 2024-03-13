@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter, OnInit, HostListener } from '@angular/core';
 import { navbarData } from './nav-dat';
+import { style, transition, trigger, animation } from "@angular/animations";
 
 
 
@@ -11,7 +12,10 @@ interface SideNavToggle{
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.scss']
+  styleUrls: ['./sidenav.component.scss'],
+  animations: [
+    
+  ]
 })
 export class SidenavComponent implements OnInit{
 
