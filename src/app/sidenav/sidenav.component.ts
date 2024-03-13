@@ -15,7 +15,9 @@ interface SideNavToggle{
   styleUrls: ['./sidenav.component.scss'],
   animations: [
     trigger('fadeIn', [
-       transition(':enter', [])
+      transition(':enter', [
+         transition(':enter', [])
+       ])
      ])
   ]
 })
