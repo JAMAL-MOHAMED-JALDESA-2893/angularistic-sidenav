@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter, OnInit, HostListener } from '@angular/core';
 import { navbarData } from './nav-dat';
-import { style, transition, trigger, animation, animate } from "@angular/animations";
+import { style, transition, trigger, animation } from "@angular/animations";
 
 
 
@@ -14,14 +14,9 @@ interface SideNavToggle{
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
   animations: [
-    trigger('fadeIn', [
-      transition(':enter', [
-        transition(':enter', [
-          style({ opacity: 0 }),
-          animate('350ms',
-            style({opacity: 1})
-          )
-         ])
+    trigger('fadeInOut', [
+       transition(':enter', [
+          style({opacity:0})
        ])
      ])
   ]
