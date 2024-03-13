@@ -14,7 +14,9 @@ interface SideNavToggle{
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
   animations: [
-     trigger('fadeIn', [])
+    trigger('fadeIn', [
+       transition(':enter', [])
+     ])
   ]
 })
 export class SidenavComponent implements OnInit{
