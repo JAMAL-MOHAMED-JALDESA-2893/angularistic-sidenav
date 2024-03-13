@@ -1,12 +1,23 @@
-import { Component, Output, EventEmitter, OnInit, HostListener } from '@angular/core';
+import {
+  Component,
+  Output,
+  EventEmitter,
+  OnInit,
+  HostListener,
+} from '@angular/core';
 import { navbarData } from './nav-dat';
-import { style, transition, trigger, animation, animate } from "@angular/animations";
+import {
+  style,
+  transition,
+  trigger,
+  animation,
+  animate,
+  keyframes,
+} from '@angular/animations';
 
-
-
-interface SideNavToggle{
+interface SideNavToggle {
   screenWidth: number;
-  collapsed:boolean
+  collapsed: boolean;
 }
 
 @Component({
@@ -15,23 +26,25 @@ interface SideNavToggle{
   styleUrls: ['./sidenav.component.scss'],
   animations: [
     trigger('fadeInOut', [
-       transition(':enter', [
-         style({ opacity: 0 }),
-         animate('350ms',
-           style({ opacity: 1 })
-         )
-       ]),
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('350ms', style({ opacity: 1 })),
+      ]),
       transition(':leave', [
-         style({ opacity: 1 }),
-         animate('350ms',
-           style({ opacity: 0 })
-         )
-       ]),
-     ])
-  ]
+        style({ opacity: 1 }),
+        animate('350ms', style({ opacity: 0 })),
+      ]),
+    ]),
+    trigger('rotate', [transition(':enter', [
+      animate('1000ms',
+        keyframes([
+          style({transform: 'rotate(0deg)', offset: '0'}),
+        ])
+      )
+    ])]),
+  ],
 })
-export class SidenavComponent implements OnInit{
-
+export class SidenavComponent implements OnInit {
   ngOnInit(): void {
     this.screenWidth = window.innerWidth;
   }
@@ -39,7 +52,7 @@ export class SidenavComponent implements OnInit{
   @Output() onToggleSidenav: EventEmitter<SideNavToggle> = new EventEmitter();
   collapsed = false;
 
-  navData = navbarData
+  navData = navbarData;
   screenWidth = 0;
 
   @HostListener('window:resize', ['$event'])
@@ -47,21 +60,26 @@ export class SidenavComponent implements OnInit{
     this.screenWidth = window.innerWidth;
     if (this.screenWidth <= 768) {
       this.collapsed = false;
-      this.onToggleSidenav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
+      this.onToggleSidenav.emit({
+        collapsed: this.collapsed,
+        screenWidth: this.screenWidth,
+      });
     }
   }
 
-
-  toggleCollapse(): void{
+  toggleCollapse(): void {
     this.collapsed = !this.collapsed;
-    this.onToggleSidenav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
+    this.onToggleSidenav.emit({
+      collapsed: this.collapsed,
+      screenWidth: this.screenWidth,
+    });
   }
 
-  closeSidenav(): void{
-    this.collapsed = false
-    this.onToggleSidenav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
+  closeSidenav(): void {
+    this.collapsed = false;
+    this.onToggleSidenav.emit({
+      collapsed: this.collapsed,
+      screenWidth: this.screenWidth,
+    });
   }
-
-
-
 }
