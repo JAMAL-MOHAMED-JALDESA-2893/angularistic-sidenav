@@ -21,10 +21,10 @@ interface SideNavToggle{
            style({ opacity: 1 })
          )
        ]),
-      transition(':enter', [
-         style({ opacity: 0 }),
+      transition(':leave', [
+         style({ opacity: 1 }),
          animate('350ms',
-           style({ opacity: 1 })
+           style({ opacity: 0 })
          )
        ]),
      ])
